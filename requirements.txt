@@ -16,7 +16,7 @@ textblob
 # Financial Data
 yfinance
 pynance
-TA-Lib
+
 
 # Natural Language Processing
 spacy
