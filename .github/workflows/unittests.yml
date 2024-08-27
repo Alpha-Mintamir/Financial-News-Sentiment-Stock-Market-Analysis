@@ -7,18 +7,18 @@ jobs:
     runs-on: ubuntu-latest  # Specifies the environment for running the job
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3  # Updated to v3 for Node.js 16+ support
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Updated to v3 for Node.js 16+ support
 
-    - name: Set up Python
-      uses: actions/setup-python@v4  # Updated to v4 for Node.js 16+ support
-      with:
-        python-version: '3.x'  # Specify the Python version you need, e.g., '3.8'
+      - name: Set up Python
+        uses: actions/setup-python@v4  # Updated to v4 for Node.js 16+ support
+        with:
+          python-version: '3.x'  # Specify the Python version you need, e.g., '3.8'
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt  # Install dependencies from requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
 
-    - name: Run Unit Tests
-      run: |
-        python -m unittest discover -s tests  # Discover and run tests in the 'tests' directory
+      - name: Run Unit Tests
+        run: |
+          python -m unittest discover -s tests  # Discover and run tests in the 'tests' directory
