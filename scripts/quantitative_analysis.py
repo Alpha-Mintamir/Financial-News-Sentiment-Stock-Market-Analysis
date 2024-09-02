@@ -1,6 +1,9 @@
+
+
 import pandas as pd
 import talib
 import matplotlib.pyplot as plt
+
 
 def load_and_merge_data(file_paths):
     """
@@ -60,3 +63,4 @@ def plot_stock_data(df, company):
     plt.title(f'{company} MACD and MACD Signal')
     plt.legend()
     plt.show()
+
